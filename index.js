@@ -1,18 +1,14 @@
 const loggerManager = require('./formatting.js')
 
-
 loggerManager.setConfigLogLevel('info')
 
 loggerManager.installGlobalLogger('testLogger',['wood','brass','string','voice','synth','guitar','bass','drumset'])
 
-
 testLogger.info("seems that this works")
 
 
-
-var eRr = new Error("this is a test of %d")
-
 function someStackyFunction() {
+    var eRr = new Error("this is a test of %d")
     testLogger.alert(eRr,2)
 }
 
